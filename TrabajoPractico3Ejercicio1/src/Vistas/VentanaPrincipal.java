@@ -28,84 +28,152 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        jp_Ocultar_Ver = new javax.swing.JPanel();
+        jb_Ocultar = new javax.swing.JButton();
+        jb_Ver = new javax.swing.JButton();
+        jp_Credenciales = new javax.swing.JPanel();
+        lbl_usuario = new javax.swing.JLabel();
+        lbl_Contrasena = new javax.swing.JLabel();
+        jpF_Contrasena = new javax.swing.JPasswordField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtF_usuario = new javax.swing.JTextPane();
+        jb_Verificar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Credenciales");
+        setResizable(false);
 
-        jLabel1.setText("Usuario:");
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setText("Contraseña:");
-
+        jTextField1.setBackground(java.awt.SystemColor.controlHighlight);
+        jTextField1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jTextField1.setText(" Inicio de sesion ");
+        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Ingresar");
+        jb_Ocultar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jb_Ocultar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Naiara\\Downloads\\Telegram Desktop\\iconos netbeans\\iconos netbeans\\icons7-ocultar-contraseña-50.png")); // NOI18N
+        jb_Ocultar.setText("Ocultar");
+        jb_Ocultar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jb_Ocultar.setBorderPainted(false);
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
-        jLabel3.setText("Inicio de Sesion");
+        jb_Ver.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jb_Ver.setIcon(new javax.swing.ImageIcon("C:\\Users\\Naiara\\Downloads\\Telegram Desktop\\iconos netbeans\\iconos netbeans\\icons7-mostrar-contraseña-50.png")); // NOI18N
+        jb_Ver.setText("Ver");
+        jb_Ver.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jb_Ver.setBorderPainted(false);
 
-        jToggleButton1.setText("Ver/Ocultar Contraseña");
+        javax.swing.GroupLayout jp_Ocultar_VerLayout = new javax.swing.GroupLayout(jp_Ocultar_Ver);
+        jp_Ocultar_Ver.setLayout(jp_Ocultar_VerLayout);
+        jp_Ocultar_VerLayout.setHorizontalGroup(
+            jp_Ocultar_VerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_Ocultar_VerLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jb_Ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(jb_Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jp_Ocultar_VerLayout.setVerticalGroup(
+            jp_Ocultar_VerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_Ocultar_VerLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(jp_Ocultar_VerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_Ocultar)
+                    .addComponent(jb_Ver))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jPasswordField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jp_Credenciales.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ingrese las credenciales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
+
+        lbl_usuario.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        lbl_usuario.setText("       Usuario:");
+        lbl_usuario.setToolTipText("lbl Usuario");
+
+        lbl_Contrasena.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        lbl_Contrasena.setText("Contraseña:");
+
+        jpF_Contrasena.setText("jPasswordField1");
+
+        jScrollPane2.setViewportView(txtF_usuario);
+
+        jb_Verificar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jb_Verificar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Naiara\\Downloads\\Telegram Desktop\\iconos netbeans\\iconos netbeans\\verificar.png")); // NOI18N
+        jb_Verificar.setText("Verificar");
+        jb_Verificar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jb_Verificar.setBorderPainted(false);
+        jb_Verificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_VerificarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jp_CredencialesLayout = new javax.swing.GroupLayout(jp_Credenciales);
+        jp_Credenciales.setLayout(jp_CredencialesLayout);
+        jp_CredencialesLayout.setHorizontalGroup(
+            jp_CredencialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_CredencialesLayout.createSequentialGroup()
+                .addGroup(jp_CredencialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_CredencialesLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addGroup(jp_CredencialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_usuario)
+                            .addComponent(lbl_Contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jp_CredencialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jpF_Contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)))
+                    .addGroup(jp_CredencialesLayout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addComponent(jb_Verificar)))
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        jp_CredencialesLayout.setVerticalGroup(
+            jp_CredencialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_CredencialesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jp_CredencialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jp_CredencialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_Contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jpF_Contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(jb_Verificar)
+                .addContainerGap())
+        );
+
         jDesktopPane1.setLayer(jTextField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jToggleButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jp_Ocultar_Ver, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jp_Credenciales, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jp_Ocultar_Ver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(41, 41, 41)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                            .addComponent(jTextField1)
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(jButton1)))))
-                .addContainerGap(76, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
-                .addGap(107, 107, 107))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jp_Credenciales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jToggleButton1)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jp_Credenciales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jp_Ocultar_Ver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,11 +188,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jb_VerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_VerificarActionPerformed
+        
+    }//GEN-LAST:event_jb_VerificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,13 +235,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JButton jb_Ocultar;
+    private javax.swing.JButton jb_Ver;
+    private javax.swing.JButton jb_Verificar;
+    private javax.swing.JPasswordField jpF_Contrasena;
+    private javax.swing.JPanel jp_Credenciales;
+    private javax.swing.JPanel jp_Ocultar_Ver;
+    private javax.swing.JLabel lbl_Contrasena;
+    private javax.swing.JLabel lbl_usuario;
+    private javax.swing.JTextPane txtF_usuario;
     // End of variables declaration//GEN-END:variables
 }
